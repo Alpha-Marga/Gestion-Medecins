@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Voici les différents departements:<br>
+
+<tr th:each="departement: ${departments}">
+    <td th:text="${departement.number}"></td>
+    <td><a th:href="@{/pays/medecins/{id}(id=${departement.number})}">Medecins</a></td>
+</tr>
+</body>
+</html>

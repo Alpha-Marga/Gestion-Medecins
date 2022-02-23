@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Pays</title>
+</head>
+<body>
+
+<tr th:each="unPays: ${pays}">
+    <td th:text="${unPays.countryName}"></td>
+    <td><a th:href="@{/pays/{id}(id=${unPays.code})}">Departements</a></td>
+</tr>
+
+</body>
+</html>

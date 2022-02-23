@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+    <div >
+        <div>
+            <form method="POST" name="f" th:action="@{/login}">
+                <h1>Connexion</h1>
+                <div th:if="${error}">
+                    Identifiant ou mot de passe incorrect
+                </div>
+                <div>
+                    <input autofocus name="username" placeholder="Login" type="text"/>
+                </div>
+                <div>
+                    <input name="password" placeholder="Mot de passe" type="password"/>
+                </div>
+                <input name="submit" type="submit"
+                       value="Se connecter"/>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
